@@ -21,6 +21,7 @@ def main():
                 pytesseract.image_to_string(Image.open(img))
             )
 
+    print('Your text is now completed.')
 
 if __name__ == '__main__':
     main()
