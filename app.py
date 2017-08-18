@@ -17,6 +17,7 @@ def main():
 
     # Delete outfile.
     os.remove('output.txt')
+    print('output.txt deleted')
 
     for pg, img in enumerate(sorted(glob.glob('./src/*'))):
         with open('output.txt', 'a+') as f:
@@ -25,7 +26,7 @@ def main():
                 pytesseract.image_to_string(Image.open(img))
             )
 
-    print('Your text is now completed.')
+    print('Your text is now completed - see output.txt')
 
 if __name__ == '__main__':
     main()
