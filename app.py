@@ -14,7 +14,7 @@ def main():
     except ImportError:
         from PIL import Image
 
-    for pg, img in enumerate(sorted(glob.glob('./images/*'))):
+    for pg, img in enumerate(sorted(glob.glob('./src/*'))):
         with open('output.txt', 'a+') as f:
             f.write(
                 '\n --- THIS IS PAGE #{} --- \n'.format(pg + 1) +
