@@ -104,3 +104,7 @@ Added by @alchermd
 -------
 # vscode
 .vscode
+
+# ignore src and output.txt
+src/
+output.txt
