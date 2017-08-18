@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 import pytesseract
 import glob
+import os
 
 def main():
     """
@@ -13,6 +14,9 @@ def main():
         import Image
     except ImportError:
         from PIL import Image
+
+    # Delete outfile.
+    os.remove('output.txt')
 
     for pg, img in enumerate(sorted(glob.glob('./src/*'))):
         with open('output.txt', 'a+') as f:
